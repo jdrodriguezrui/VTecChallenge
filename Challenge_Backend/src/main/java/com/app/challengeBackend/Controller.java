@@ -34,7 +34,7 @@ public class Controller {
         return ResponseEntity.ok(stationNames);
     }
 
-    @GetMapping("/routes")
+    @PostMapping("/routes")
     public ResponseEntity<List<String>> getStationRoutes(
             @RequestBody TimeRequest request){
 
@@ -46,7 +46,7 @@ public class Controller {
         }
     }
 
-    @GetMapping("/time")
+    @PostMapping("/time")
     public ResponseEntity<Float> getTime(
             @RequestBody TimeRequest requestBody){
 
@@ -59,7 +59,7 @@ public class Controller {
         }
     }
 
-    @PostMapping("/time")
+    @PostMapping("/entry")
     public ResponseEntity<Float> addEntry(
             @RequestBody TimeRequest requestBody){
 
